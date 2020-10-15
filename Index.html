@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>User Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+    <form method="post" action="" id="myForm">
+        <fieldset>
+            <legend>Personal information:</legend>
+            First name:<br>
+            <input id="firstname" type="text" name="firstname">
+            <br> Last name:<br>
+            <input id="lastname" type="text" name="lastname">
+            <br><br>
+            <input id="btn" type="button"  value="Submit">
+        </fieldset>
+    </form>
+
+    <script type="text/javascript">
+  
+document.getElementById("btn").addEventListener('click', function(){
+//Display user information through popup message-box
+    var firstname = document.getElementById("firstname").value;
+    var lastname = document.getElementById("lastname").value;
+    alert("Welcome "+ firstname +', '+ lastname);
+//Clear user information on textbox
+    document.getElementById("myForm").reset();
+});
+
+    </script>
+</body>
+</html>
